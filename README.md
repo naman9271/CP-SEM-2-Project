@@ -30,7 +30,7 @@ BDMS/
 ├── README.md # Project Documentation │
 ├── database/ # Folder to Store SQLite Database File 
 │ └── blood_donation.db 
-│ └── venv/ # Python Virtual Environment (Optional)
+├── venv/ # Python Virtual Environment (Optional)
 ```
 
 ---
