@@ -7,9 +7,6 @@ __pycache__/
 venv/
 env/
 
-# Environment Variables
-.env
-
 # SQLite Database Files
 *.db
 database/*.db

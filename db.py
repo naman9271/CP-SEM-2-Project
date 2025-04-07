@@ -1,12 +1,7 @@
 import sqlite3
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-DB_NAME = os.getenv("DB_NAME")
 
 def get_connection():
-    return sqlite3.connect(f"database/{DB_NAME}")
+    return sqlite3.connect("database/blood.db")
 
 def create_tables():
     conn = get_connection()
