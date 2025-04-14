@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Dashboard</h2>
+<a href="{{ url_for('add_donor_route') }}" class="btn">Add Donor</a>
+<a href="{{ url_for('search_donor_route') }}" class="btn">Search Donor</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Blood Group</th>
+            <th>Contact</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for donor in donors %}
+        <tr>
+            <td>{{ donor[0] }}</td>
+            <td>{{ donor[1] }}</td>
+            <td>{{ donor[2] }}</td>
+            <td>{{ donor[3] }}</td>
+            <td>{{ donor[4] }}</td>
+            <td>
+                <a href="{{ url_for('delete_donor_route', donor_id=donor[0]) }}" class="btn">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

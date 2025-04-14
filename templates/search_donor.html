@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Search Donor</h2>
+<form method="POST">
+    <label for="blood_group">Blood Group:</label>
+    <input type="text" id="blood_group" name="blood_group" required>
+    <button type="submit">Search</button>
+</form>
+
+{% if donors %}
+<h3>Matching Donors</h3>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Blood Group</th>
+            <th>Contact</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for donor in donors %}
+        <tr>
+            <td>{{ donor[0] }}</td>
+            <td>{{ donor[1] }}</td>
+            <td>{{ donor[2] }}</td>
+            <td>{{ donor[3] }}</td>
+            <td>{{ donor[4] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}

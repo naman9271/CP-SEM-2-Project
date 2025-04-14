@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Welcome to the Blood Donation Management System</h2>
+<p>Manage donor records and blood group availability efficiently.</p>
+<a href="{{ url_for('signup') }}" class="btn">Signup</a>
+<a href="{{ url_for('login') }}" class="btn">Login</a>
+{% endblock %}
