@@ -177,3 +177,50 @@ table th {
 .navbar-right a:hover {
     background: #003d80;
 }
+
+/* Flash Messages */
+.flash-messages {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0.5rem 1rem;
+}
+
+.flash-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.flash-message.success {
+    background-color: #28a745;
+}
+
+.flash-message.danger {
+    background-color: #dc3545;
+}
+
+.flash-message.info {
+    background-color: #17a2b8;
+}
+
+.flash-message .close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 1rem;
+    line-height: 1;
+}
+
+.flash-message .close-btn:hover {
+    color: #ccc;
+}
