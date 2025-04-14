@@ -224,3 +224,31 @@ table th {
 .flash-message .close-btn:hover {
     color: #ccc;
 }
+
+/* Form Footer */
+.form-footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form-footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-footer .btn-secondary {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #6c757d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.form-footer .btn-secondary:hover {
+    background: #5a6268;
+}
