@@ -45,7 +45,7 @@ form label {
     font-weight: bold;
 }
 
-form input, form button {
+form input, form select, form button {
     padding: 0.5rem;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -61,6 +61,15 @@ form button {
 
 form button:hover {
     background: #0056b3;
+}
+
+form .btn-secondary {
+    background: #6c757d;
+    color: #fff;
+}
+
+form .btn-secondary:hover {
+    background: #5a6268;
 }
 
 table {
@@ -80,6 +89,15 @@ table th {
     color: #fff;
 }
 
+.profile-card {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
 .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -92,4 +110,21 @@ table th {
 
 .btn:hover {
     background: #0056b3;
+    opacity: 0.9;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    color: #fff;
 }

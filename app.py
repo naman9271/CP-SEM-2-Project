@@ -81,8 +81,22 @@ def search_donor_route():
 def delete_donor_route(donor_id):
     if "username" not in session:
         return redirect(url_for("login"))
-    delete_donor(donor_id)
-    flash("Donor deleted successfully!", "success")
+    try:
+        delete_donor(donor_id)
+        flash(f"Donor with ID {donor_id} deleted successfully!", "success")
+    except Exception as e:
+        flash(f"Error deleting donor: {str(e)}", "danger")
+    return redirect(url_for("dashboard"))
+
+@app.route("/view_donor/<int:donor_id>")
+def view_donor(donor_id):
+    if "username" not in session:
+        return redirect(url_for("login"))
+    donors = get_donors()
+    donor = next((d for d in donors if d[0] == donor_id), None)
+    if donor:
+        return render_template("view_donor.html", donor=donor)
+    flash("Donor not found!", "danger")
     return redirect(url_for("dashboard"))
 
 @app.route("/logout")

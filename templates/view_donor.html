@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Donor Profile</h2>
+<div class="profile-card">
+    <p><strong>ID:</strong> {{ donor[0] }}</p>
+    <p><strong>Name:</strong> {{ donor[1] }}</p>
+    <p><strong>Age:</strong> {{ donor[2] }}</p>
+    <p><strong>Blood Group:</strong> {{ donor[3] }}</p>
+    <p><strong>Contact:</strong> {{ donor[4] }}</p>
+</div>
+<a href="{{ url_for('dashboard') }}" class="btn">Back to Dashboard</a>
+{% endblock %}
