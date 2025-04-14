@@ -1,44 +1,30 @@
 # Blood Donation Management System
 
 ## Project Overview
-This is a simple Blood Donation Management System built using Python and SQLite as the database.  
-This project helps to manage login/signup, donor records, and blood group availability.
+The Blood Donation Management System is a web-based application built using Python (Flask framework) and SQLite.  
+It helps manage donor records, blood group availability, and user authentication efficiently.
 
 ---
 
 ## Features
 
-- User Authentication (Login & Signup)
-- Add Donor Details
-- View All Donors
-- Search Donor by Blood Group
-- Delete Donor
-- Exit Safely
-
----
-
-## Project Architecture
-```
-BDMS/ 
-│ 
-├── main.py # Entry Point of Application 
-├── auth.py # Handles Login & Signup 
-├── db.py # Handles Database & Tables 
-├── donor.py # Donor Operations (Add, View, Search, Delete) 
-├── .gitignore # Files/Folders to Ignore in Git 
-├── requirements.txt # Python Libraries to Install 
-├── README.md # Project Documentation │
-├── database/ # Folder to Store SQLite Database File 
-│ └── blood_donation.db 
-├── venv/ # Python Virtual Environment (Optional)
-```
+- **User Authentication**: Signup and Login functionality with secure password hashing.
+- **Donor Management**:
+  - Add Donor Details
+  - View All Donors
+  - Search Donor by Blood Group
+  - Delete Donor
+- **Responsive Design**: User-friendly interface with a professional look.
+- **Flash Messages**: Informative messages for user actions with dismiss functionality.
 
 ---
 
 ## Technologies Used
 
-- Python
-- SQLite (Python built-in library)
+- **Backend**: Python (Flask Framework)
+- **Frontend**: HTML, CSS
+- **Database**: SQLite
+- **Password Security**: Passlib for password hashing
 
 ---
 
@@ -46,51 +32,86 @@ BDMS/
 
 ### 1. Clone the Repository
 
+Clone the repository to your local machine:
+
 ```bash
 git clone https://github.com/naman9271/CP-SEM-2-Project
 cd CP-SEM-2-Project
 ```
 
-### 2. Create Virtual Environment
+### 2. Install Dependencies
 
-```bash
-python -m venv venv
-```
-
-### 3. Activate Virtual Environment
-
-**For Windows**
-```bash
-venv\Scripts\activate
-```
-**For Mac/Linux**
-```bash
-source venv/bin/activate
-```
-
-### 4. Install Required Packages
+Ensure you have Python installed. Then, install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Run the Project
+### 3. Run the Application
+
+Start the Flask development server:
 
 ```bash
-python main.py
+python app.py
+```
+
+The application will be available at `http://127.0.0.1:5000`.
+
+---
+
+## Application Workflow
+
+1. **Home Page**: Navigate to the home page to access the Signup or Login options.
+2. **Signup**: Create a new account using a username and password.
+3. **Login**: Log in to access the dashboard.
+4. **Dashboard**:
+   - View all donors.
+   - Add new donor details.
+   - Search for donors by blood group.
+   - Delete donor records.
+5. **Logout**: Securely log out of the application.
+
+---
+
+## Folder Structure
+
+```
+Blood-Donation-Management/
+│
+├── app.py                # Main application file
+├── auth.py               # Handles user authentication
+├── donor.py              # Donor operations (Add, View, Search, Delete)
+├── db.py                 # Database connection and table creation
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+├── static/               # Static files (CSS, images)
+│   ├── styles.css        # Custom styles
+│   └── logo.png          # Application logo
+├── templates/            # HTML templates
+│   ├── base.html         # Base template
+│   ├── home.html         # Home page
+│   ├── login.html        # Login page
+│   ├── signup.html       # Signup page
+│   ├── dashboard.html    # Dashboard
+│   ├── add_donor.html    # Add donor form
+│   ├── search_donor.html # Search donor form
+│   └── view_donor.html   # View donor profile
+└── database/             # SQLite database folder
+    └── blood.db          # SQLite database file
 ```
 
 ---
 
-> ### Developed By  
-> **Naman Jain**  
-> *2024UIC3579* 
+## Developed By
 
-> **Anvay Khrab**  
-> *2024UIC3580*
+- **Naman Jain**  
+  *2024UIC3579*
 
-> **Daksh Pathak**  
-> *2024UIC3539*
+- **Anvay Khrab**  
+  *2024UIC3580*
+
+- **Daksh Pathak**  
+  *2024UIC3539*
 
 > **CP-SEM-2 (Python + SQL)**  
 > *Blood Donation Management System*
