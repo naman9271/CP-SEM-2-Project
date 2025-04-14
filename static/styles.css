@@ -128,3 +128,52 @@ table th {
     background: #c82333;
     color: #fff;
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: #0056b3;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-left .logo {
+    height: 60px;
+    width: auto;
+    border-radius: 5px;
+    background: #fff;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-left h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.navbar-right a:hover {
+    background: #003d80;
+}
